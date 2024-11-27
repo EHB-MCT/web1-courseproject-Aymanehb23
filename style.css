@@ -2,7 +2,7 @@
 body{
 	margin: 0;
 	font-family: 'Lato', sans-serif;
-	background-color: rgb(255, 225, 1);
+	background-color: rgb(247, 215, 35);
 }
 
 .wrapper{
@@ -10,7 +10,7 @@ body{
 width: 90%;	
 height: 1000px;
 margin: 0 auto;
-background-color: grey
+
 }
 
 .header{
@@ -24,7 +24,7 @@ background-color: grey
 
 .logo{
 
-	background-color: aliceblue;
+	
 }
 
 .logo img{
@@ -35,7 +35,7 @@ width: 120px;
 
 .navigation{
 
-	background-color: rgb(59, 135, 145);
+	
 }
 
 .navigation ul{
@@ -46,16 +46,22 @@ width: 120px;
 
 .navigation ul li {
 
-display: inline-block;
-margin-bottom: 15px;
-font-size: 20PX;
+display: inline-block ;
+margin-bottom: 20px;
+margin-right: 10PX;
+font-size: 35PX;
+
 
 }
 
 .navigation ul li a {
 
 	text-decoration: none;
-	color: rgb(161, 154, 22);
+	color: rgb(28, 28, 24);
+
+}
+.navigation ul :hover{
+	background-color: rgb(228, 166, 33);
 }
 
 .Bart{
@@ -73,9 +79,21 @@ padding-right: 50px;
 padding-bottom: 50px;
 }
 
-.Pict{
+.Bart-text h1{
+	font-size: 70px;
+	color: rgb(28, 26, 26);
 
-flex: 1;
+
+}
+.Bart-text h3 {
+	font-size: 30px;
+	color: rgb(220, 145, 25);
 
 }
 
+.Pict{
+
+flex: -1;
+
+
+}
