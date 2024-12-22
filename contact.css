@@ -137,7 +137,7 @@ body {
 	color: rgb(28, 28, 24);
 	font-family: "Lato", sans-serif;
 	display: flex;
-	align-items: center; /* Centraal uitgelijnd met de afbeelding */
+	align-items: center; /
 	gap: 10px; /* Ruimte tussen afbeelding en tekst */
 	background: rgba(223, 189, 19, 0.9);
 	padding: 10px 20px;
@@ -147,8 +147,8 @@ body {
 }
 
 .contact-item:hover {
-	transform: scale(1.05); /* Vergroot het contact-item subtiel bij hover */
-	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Meer schaduw bij hover */
+	transform: scale(1.05); 
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .contact-item img {
@@ -159,7 +159,7 @@ body {
 }
 
 .contact-item img:hover {
-	transform: rotate(360deg); /* Leuke animatie bij hover op het logo */
+	transform: rotate(360deg); 
 }
 
 .contact-item a {
@@ -173,7 +173,7 @@ body {
 	color: orange;
 }
 
-/* Responsiviteit */
+
 @media (max-width: 768px) {
 	.contact-section h1 {
 		font-size: 36px;
