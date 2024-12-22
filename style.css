@@ -83,3 +83,9 @@ body {
 	width: 100%;
 	border: 1px solid blue;
 }
+@media (max-width: 768px) {
+	.hobby-list {
+		flex-direction: column;
+		align-items: center;
+	}
+}
