@@ -4,45 +4,47 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact</title>
-	<link rel="stylesheet" href="about.css">
+	<link rel="stylesheet" href="contact.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<div class="header">
 			<div class="logo">
-				<img src="images/logo_bart.png" alt="Bart Simpson Logo">
+				<img src="images/logo_bart.png" alt="Logo">
 			</div>
-			<nav class="navigation">
+			<div class="navigation">
 				<ul>
 					<li><a href="index.html">Homepage</a></li>
 					<li><a href="about.html">About Me</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
-			</nav>
-		</header>
-
-		<main class="contact-section">
-			<h1>Contacteer Mij</h1>
-			<p>Heb je vragen? Vul het formulier hieronder in en ik neem contact met je op!</p>
-			<div class="contact-form-container">
-				<form class="contact-form" action="#" method="POST">
-					<div class="form-group">
-						<label for="name">Naam</label>
-						<input type="text" id="name" name="name" placeholder="Jouw naam" required>
-					</div>
-					<div class="form-group">
-						<label for="email">E-mail</label>
-						<input type="email" id="email" name="email" placeholder="Jouw e-mail" required>
-					</div>
-					<div class="form-group">
-						<label for="message">Bericht</label>
-						<textarea id="message" name="message" rows="5" placeholder="Schrijf je bericht hier..." required></textarea>
-					</div>
-					<button type="submit" class="btn-submit">Verzenden</button>
-				</form>
 			</div>
-		</main>
+		</div>
+		<div class="contact-section">
+			<h1>Contact Me</h1>
+			<div class="contact-item">
+				<strong>Telefoonnummer:</strong> 
+				<a href="tel:+0456477878">04 56 47 78 78</a>
+			</div>
+			<div class="contact-item">
+				<strong>Email:</strong> 
+				<a href="mailto:bartSimpson@outlook.com">bartSimpson@outlook.com</a>
+			</div>
+			<div class="contact-item">
+				<img width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1" width="50" height=""/>
+				<a href="https://www.instagram.com/bartSimpson" target="_blank">bartSimpson</a>
+
+			</div>
+		</div>
 	</div>
+	<script>
+		const hamburger = document.querySelector('.hamburger');
+		const menu = document.querySelector('.navigation ul');
+	
+		hamburger.addEventListener('click', () => {
+			menu.classList.toggle('show');
+		});
+	</script>
+	
 </body>
 </html>
-

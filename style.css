@@ -45,6 +45,7 @@ body {
 .navigation ul li a {
 	text-decoration: none;
 	color: rgb(28, 28, 24);
+	transition: color 0.3s ease-in-out;
 }
 .navigation ul :hover {
 	background-color: rgb(228, 166, 33);

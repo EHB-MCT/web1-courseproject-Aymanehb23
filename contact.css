@@ -5,9 +5,8 @@ body {
 	padding: 0;
 	font-family: "Lato", sans-serif;
 	background-image: url(images/backg.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-size: cover; /* Past de achtergrond beter aan */
+	background-attachment: fixed; /* Houdt de achtergrond vast tijdens scrollen */
 	color: #333;
 }
 
@@ -22,12 +21,12 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 0;
-	background-color: rgba(255, 255, 255, 0.8); /* Subtiele achtergrond voor betere leesbaarheid */
 	border-radius: 10px;
+	position: relative; /* Voor absolute positionering van de hamburger */
 }
 
 .logo img {
-	width: 150px;
+	width: 130px;
 }
 
 .navigation ul {
@@ -40,110 +39,153 @@ body {
 
 .navigation a {
 	text-decoration: none;
-	color: rgb(28, 28, 24);
+	color: #333;
 	font-weight: bold;
-	font-size: 20px;
-	margin-right: 20px;
-	transition: color 0.3s ease-in-out;
+	font-size: 35px;
+	transition: color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 .navigation a:hover {
-	color: #4caf50; /* Hover-kleur */
+	color: orange;
+	transform: scale(1.1); /* Vergroot de tekst subtiel bij hover */
 }
 
-/* Contact sectie */
-.contact-section {
-	text-align: center;
-	padding: 60px 0;
-	background-color: rgba(255, 255, 255, 0.8); /* Semi-transparant wit voor een moderne look */
-	margin-top: 30px;
-	border-radius: 10px;
+/* Hamburger menu */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.hamburger div {
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+/* Verborgen menu voor mobiel */
+.navigation ul {
+	display: flex;
+}
+
+.navigation ul.show {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	top: 70px;
+	right: 20px;
+	padding: 10px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.navigation ul {
+		display: none;
+	}
+
+	.navigation ul.show {
+		display: flex;
+	}
+
+	.navigation a {
+		font-size: 25px;
+	}
+}
+
+/* Contact gegevens */
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh; /* Zorgt ervoor dat de sectie de volledige hoogte van het scherm gebruikt */
+	background: rgba(
+		255,
+		255,
+		255,
+		0.744
+	); /* Transparante achtergrond voor betere leesbaarheid */
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Moderne schaduw */
+	padding: 20px;
 }
 
 .contact-section h1 {
-	font-size: 42px;
+	font-size: 48px;
 	color: rgb(28, 28, 24);
-	margin-bottom: 10px;
-	font-family: "Poppins", sans-serif;
-}
-
-.contact-section p {
-	font-size: 18px;
-	color: #333;
 	margin-bottom: 30px;
-	font-family: "Lato", sans-serif;
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase; /* Moderne hoofdletterstijl */
+	letter-spacing: 2px; /* Geeft een strak gevoel */
 }
 
-/* Contact formulier */
-.contact-form-container {
-	display: flex;
-	justify-content: center;
-}
-
-.contact-form {
-	background: rgba(255, 255, 255, 0.9);
-	padding: 30px;
-	border-radius: 10px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	width: 400px;
-	font-family: "Lato", sans-serif;
-}
-
-.contact-form .form-group {
+.contact-item {
 	margin-bottom: 20px;
-	text-align: left;
-}
-
-.contact-form label {
-	font-size: 16px;
-	color: #333;
-	display: block;
-	margin-bottom: 8px;
-	font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-	width: 100%;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	font-size: 16px;
+	font-size: 22px;
+	color: rgb(28, 28, 24);
 	font-family: "Lato", sans-serif;
-}
-
-.contact-form textarea {
-	resize: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-	outline: none;
-	border-color: #4caf50;
-	box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-}
-
-.btn-submit {
-	background-color: #4caf50;
-	color: #fff;
-	padding: 10px 15px;
-	border: none;
+	display: flex;
+	align-items: center; /* Centraal uitgelijnd met de afbeelding */
+	gap: 10px; /* Ruimte tussen afbeelding en tekst */
+	background: rgba(223, 189, 19, 0.9);
+	padding: 10px 20px;
 	border-radius: 5px;
-	font-size: 18px;
-	font-weight: bold;
-	cursor: pointer;
-	width: 100%;
-	transition: background-color 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-submit:hover {
-	background-color: #45a049;
+.contact-item:hover {
+	transform: scale(1.05); /* Vergroot het contact-item subtiel bij hover */
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Meer schaduw bij hover */
+}
+
+.contact-item img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	transition: transform 0.3s ease;
+}
+
+.contact-item img:hover {
+	transform: rotate(360deg); /* Leuke animatie bij hover op het logo */
+}
+
+.contact-item a {
+	text-decoration: none;
+	color: rgb(28, 28, 24);
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+	color: orange;
 }
 
 /* Responsiviteit */
 @media (max-width: 768px) {
-	.contact-form {
-		width: 90%;
+	.contact-section h1 {
+		font-size: 36px;
+	}
+
+	.contact-item {
+		font-size: 18px;
+		gap: 5px;
+	}
+
+	.contact-item img {
+		width: 40px;
+		height: 40px;
 	}
 }

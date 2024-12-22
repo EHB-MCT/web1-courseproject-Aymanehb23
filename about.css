@@ -35,21 +35,18 @@ body {
 
 .navigation a {
 	text-decoration: none;
-	color: rgb(28, 28, 24);
+	color: #333;
 	font-weight: bold;
 	font-size: 35px;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transition: color 0.3s ease-in-out, transform 0.3s ease;
 }
 .navigation ul li a {
 	text-decoration: none;
 }
 
 .navigation a:hover {
-	background-color: rgb(228, 166, 33);
-    border-width: 200px;
-    border-radius: 20px;
+	color: orange;
+	transform: scale(1.1); /* Vergroot de tekst subtiel bij hover 
     
 }
 
